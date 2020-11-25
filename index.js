@@ -4,7 +4,7 @@ const alexa = require('alexa-bot-api')
 const chatbot = new alexa("i hate you")
 const prefix = ";"
 
-client.login("NzUwNDgzNjcwMzcyMTg4MzM0.X07MYg.m0Wzb7D7Wc4DlenYnuZi1sefcp4")
+client.login("bot token goes here")
 
 client.on('ready', () => {
     console.log("talkative is online")
