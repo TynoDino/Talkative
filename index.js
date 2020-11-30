@@ -7,7 +7,7 @@ const prefix = ";"
 client.login("bot token goes here")
 
 client.on('ready', () => {
-    console.log("talkative is online")
+    console.log(client.user.tag + "is online")
     client.user.setActivity("messages that start with semicolons", {type: "LISTENING"})
     client.guilds.cache.forEach((guild) => {console.log(guild.name)})
 });
