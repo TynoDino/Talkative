@@ -3,7 +3,7 @@ const client = new discord.Client()
 const alexa = require('alexa-bot-api')
 const chatbot = new alexa("i hate you")
 const prefix = ";"
-const noReply = [";help", ";vote", ";donate"]
+const noReply = ["help", "vote", "donate"]
 
 client.login("bot token goes here")
 
@@ -31,11 +31,11 @@ var donateray = [
     
     client.on('message', async (message) => {
         if(message.author.bot) return;
-        if(message.content == '?donate')
+        if(message.content == ';donate')
             message.channel.send(donateray[Math.floor(Math.random() * donateray.length)] + " https://www.patreon.com/tynodino or https://paypal.me/tinosolomon?locale.x=en_US%22")
-        if(message.content == '?vote')
+        if(message.content == ';vote')
             message.channel.send(voteray[Math.floor(Math.random() * voteray.length)] + " https://top.gg/bot/750483670372188334 and https://discordbotlist.com/bots/talkativev2%22")
-        if(message.content == '?help')
+        if(message.content == ';help')
             message.channel.send(helpray[Math.floor(Math.random() * helpray.length)])
     });
 
@@ -46,4 +46,3 @@ client.on('message', async message => {
     if(message.content = noReply) return;
     chatbot.getReply(content).then (r => message.channel.send(r))
 });
-
